@@ -1,0 +1,110 @@
+:root {
+    --blue: #7A75B5;;
+    /* Theme color */
+    --theme: var(--primary);
+}
+
+/* Core styles/functionality */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+}
+
+.accordion details[open] .accordion-content {
+    max-height: 10rem;
+}
+
+/* Visual styles */
+.accordion {
+    color: var(--theme);
+    border: 2px solid;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: 20px auto; /* Center the accordion */
+    max-width: 1000px;
+    width: 100%; /* Make it responsive */
+}
+
+.collapsible {
+    margin: auto;
+}
+
+.collapse,
+.closeall {
+    display: flex;
+    color: white;
+    background: var(--theme);
+    cursor: pointer;
+}
+
+.collapse {
+    font-size: 1.5rem;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.collapse::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+}
+
+.accordion details[open] .collapse::after {
+    transform: rotate(270deg);
+}
+
+.accordion-content p {
+    margin: 0;
+    padding: 1rem;
+}
+
+.closeall {
+    justify-content: flex-end;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.cl {
+    --theme: var(--blue);
+}
+
+/* Arrow animation */
+.accordion details:not([open]) .collapse:hover::after {
+    animation: bounce .5s infinite;
+}
+
+@keyframes bounce {
+    25% {
+        transform: rotate(90deg) translate(.25rem);
+    }
+    75% {
+        transform: rotate(90deg) translate(-.25rem);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .collapse {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        padding: 0.75rem; /* Adjust padding for smaller screens */
+    }
+
+    .accordion-content {
+        padding: 0.5rem; /* Reduce padding for content on smaller screens */
+    }
+
+    .closeall {
+        font-size: 0.85rem; /* Adjust font size for close button */
+    }
+    .accordion-content p {
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 1rem;
+    }
+}
+
+

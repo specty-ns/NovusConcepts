@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="website">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="utf-8" />
+    <title>Novus Concepts | Projects</title>
+    <link rel="SHORTCUT ICON" href="../assets/images/favicon.png" type="image/x-icon" />
+
+    <link rel="canonical" href="./" />
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Our Projects | Novus Concepts Stretch Ceilings">
+    <meta name="description" content="Explore our portfolio of stunning stretch ceiling projects, showcasing our expertise in innovative, high-quality stretch ceilings for homes, offices, and commercial spaces.">
+    <meta name="keywords" content="Novus Concepts projects, stretch ceiling portfolio, innovative ceiling designs, custom ceilings, commercial ceilings, residential ceilings, stretch ceiling work, interior design projects, ceiling solutions">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Our Projects | Novus Concepts Stretch Ceilings">
+    <meta property="og:description" content="Discover Novus Concepts' completed stretch ceiling projects. From residential interiors to large commercial spaces, explore how our innovative solutions have transformed spaces since 2005.">
+    <meta property="og:url" content="https://novusconcepts.in/projects">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://novusconcepts.in/assets/images/favicon.png">
+    <meta property="og:site_name" content="Novus Concepts Stretch Ceilings">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="../mt-includes/fonts/fontawesome-webfont3e6e.woff2?v=4.7.0" />
+    <link rel="stylesheet" href="../mt-includes/css/assets.min8e9c.css?_build=1668882370" />
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Cardo:regular,italic,700|Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&amp;subset=latin);
+    </style>
+    <link rel="stylesheet" href="../mt-demo/68200/68216/mt-content/assets/styles1e33.css?_build=1721396991"
+        id="moto-website-style" />
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
+                "name": "Our Projects | Novus Concepts Stretch Ceilings",
+                "description": "Explore Novus Concepts' portfolio of completed stretch ceiling projects, highlighting innovative and high-quality solutions for residential, commercial, and industrial spaces.",
+                "url": "https://novusconcepts.in/projects",
+                "image": [
+                    "https://novusconcepts.inassets/images/projects/1.jpg",
+                    "https://novusconcepts.inassets/images/projects/14.jpg",
+                    "https://novusconcepts.in/assets/images/projects/media21.jpg"
+                ],
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Novus Concepts Stretch Ceilings",
+                    "logo": "https://novusconcepts.in/assets/images/favicon.png",
+                    "url": "https://novusconcepts.in"
+                },
+            }
+            </script>
+            
+
+    <style>
+        /* Grid Layout */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* 4 images in one row */
+            gap: 16px;
+            padding: 16px;
+        }
+
+        .image-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox.hidden {
+            display: none;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .image-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Simple navigation buttons with triangle arrows */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            /* No background */
+            color: #fff;
+            /* White color for the arrow */
+            font-size: 2rem;
+            /* Arrow size */
+            width: 40px;
+            /* Width of the button */
+            height: 40px;
+            /* Height of the button */
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            /* Subtle shadow */
+        }
+
+        /* Left arrow (Previous button) */
+        #prev {
+            left: 10px;
+            /* Position from the left */
+        }
+
+        /* Right arrow (Next button) */
+        #next {
+            right: 10px;
+            /* Position from the right */
+        }
+
+        /* Left-pointing triangle arrow */
+        #prev::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 15px solid #fff;
+            /* White triangle pointing left */
+        }
+
+        /* Right-pointing triangle arrow */
+        #next::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 15px solid #fff;
+            /* White triangle pointing right */
+        }
+
+        /* Pagination styles */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            background-color: #7A75B5;
+            /* Green background */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 0 5px;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .pagination button:hover {
+            background-color: #45a049;
+            /* Darker green on hover */
+        }
+
+        .pagination button.disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .pagination .page-number {
+            font-weight: bold;
+        }
+    </style>
+
+
+</head>
+
+<body class="moto-background moto-website_live">
+    <div class="page">
+        <header id="section-header" class="header moto-section" data-widget="section" data-container="section">
+            <div class="moto-widget moto-widget-block moto-bg-color5_5 moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                data-widget="block" data-spacing="saaa" data-bg-position="top" data-moto-sticky="{}">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="moto-cell col-sm-12" data-container="container">
+                            <div class="moto-widget moto-widget-row row-fixed moto-justify-content_center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                data-grid-type="sm" data-widget="row" data-spacing="aaaa" data-bg-position="left top">
+                                <div class="container-fluid">
+                                    <div class="row" data-container="container">
+                                        <div class="moto-widget moto-widget-row__column moto-cell col-sm-3 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                            data-widget="row.column" data-container="container" data-spacing="aaaa"
+                                            data-bg-position="left top">
+                                            <div data-widget-id="wid_1546463245_v52ku4b3e"
+                                                class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-default moto-align-center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                                data-widget="image">
+                                                <a href=".././" data-action="page"
+                                                    class="moto-widget-image-link moto-link">
+                                                    <img style="width: 150px" data-src="../assets/images/favicon.png"
+                                                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0  '%3E%3C/svg%3E"
+                                                        class="moto-widget-image-picture moto-widget-deferred-content lazyload"
+                                                        data-id="345" title="" alt="NovusConcepts-Logo" />
+                                                </a>
+                                            </div>
+
+                                            <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                                data-widget="text" data-preset="default" data-spacing="aaaa"
+                                                data-animation="">
+                                                <div class="moto-widget-text-content moto-widget-text-editable">
+                                                    <p class="moto-text_system_1" style="text-align: center">
+                                                        <a target="_self" href=".././" data-action="page"
+                                                            data-id="1" class="moto-link"><span class="moto-color2_3">
+                                                                Stretch Ceilings</span></a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="moto-widget moto-widget-row__column moto-cell col-sm-9 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                            data-widget="row.column" data-container="container" data-spacing="aaaa"
+                                            data-bg-position="left top">
+                                            <div data-widget-id="wid_1546463245_xrfwyk0tw"
+                                                class="moto-widget moto-widget-menu moto-preset-3 moto-align-right moto-align-center_mobile-h moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto"
+                                                data-preset="3" data-widget="menu">
+                                                <a href="#" class="moto-widget-menu-toggle-btn"><i
+                                                        class="moto-widget-menu-toggle-btn-icon fa fa-bars"></i></a>
+                                                <ul class="moto-widget-menu-list moto-widget-menu-list_horizontal">
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href=".././" data-action="page"
+                                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">HOME</a>
+                                                    </li>
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="./" data-action="page"
+                                                            class="moto-widget-menu-link moto-widget-menu-link-level-1  moto-widget-menu-link-active moto-link">PROJECTS</a>
+                                                    </li>
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="../about-us/./" data-action="page"
+                                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">ABOUT
+                                                            US</a>
+                                                    </li>
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="../contact-us/./" data-action="page"
+                                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">CONTACT
+                                                            US</a>
+                                                    </li>
+                                                    <!-- <li class="moto-widget-menu-item">
+                                                        <a href=".././" data-action="page"
+                                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">HOME</a>
+                                                    </li>
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="../stretch-ceiling/./" data-action="page"
+                                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">STRETCH
+                                                            CEILING</a>
+                                                    </li>
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="../suspended-ceiling/./" data-action="page"
+                                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">SUSPENDED
+                                                            CEILING</a>
+                                                    </li>
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="../residential/./" data-action="page"
+                                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">RESIDENTIAL</a>
+                                                    </li>
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="./" data-action="page"
+                                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-widget-menu-link-active moto-link">COMMERCIAL</a>
+                                                    </li>
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="../price/./" data-action="page"
+                                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">PRICE</a>
+                                                    </li>
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="../about-us/./" data-action="page"
+                                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">ABOUT
+                                                            US</a>
+                                                    </li>
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="../blog/./" data-action="blog.index"
+                                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">BLOG</a>
+                                                    </li>
+                                                    <li class="moto-widget-menu-item">
+                                                        <a href="../contact-us/./" data-action="page"
+                                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">CONTACTS</a>
+                                                    </li> -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="section-content" class="content page-13 moto-section" data-widget="section"
+            data-container="section">
+            <div class="moto-widget moto-widget-block moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto"
+                data-widget="block" data-spacing="lala" style="
+            background-image: url(../assets/images/mt-1707-content-bg04.jpg);
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+          " data-bg-image="../assets/images/mt-1707-content-bg04.jpg" data-bg-position="bottom">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="moto-cell col-sm-12" data-container="container">
+                            <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-small moto-spacing-bottom-auto moto-spacing-left-small"
+                                data-widget="text" data-preset="default" data-spacing="asas" data-animation="">
+                                <div class="moto-widget-text-content moto-widget-text-editable">
+                                    <h1 class="moto-text_238" style="text-align: center">
+                                        PROJECTS
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="moto-widget moto-widget-block moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto"
+                data-widget="block" data-spacing="lama" data-bg-position="left top">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="moto-cell col-sm-12" data-container="container">
+                            <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto moto-justify-content_center"
+                                data-grid-type="sm" data-widget="row" data-spacing="aaaa" data-bg-position="left top">
+                                <div class="container-fluid">
+                                    <div class="row" data-container="container">
+                                        <div class="moto-widget moto-widget-row__column moto-cell col-sm-1 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                            data-widget="row.column" data-container="container" data-spacing="aaaa"
+                                            data-bg-position="left top">
+                                            <div data-widget-id="wid_1546502947_9hcud8e02"
+                                                class="moto-widget moto-widget-divider moto-preset-default moto-align-left moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto"
+                                                data-widget="divider_horizontal" data-preset="default">
+                                                <hr class="moto-widget-divider-line"
+                                                    style="max-width: 100%; width: 60px" />
+                                            </div>
+                                        </div>
+
+                                        <div class="moto-widget moto-widget-row__column moto-cell col-sm-11 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                            data-widget="row.column" data-container="container" data-spacing="aaaa"
+                                            data-bg-position="left top">
+                                            <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                                data-widget="text" data-preset="default" data-spacing="aaaa"
+                                                data-animation="">
+                                                <div class="moto-widget-text-content moto-widget-text-editable">
+                                                    <p class="moto-text_system_11">OUR PORTFOLIO</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto moto-justify-content_center"
+                                data-grid-type="sm" data-widget="row" data-spacing="aaaa" data-bg-position="left top">
+                                <!-- <div class="container-fluid">
+                                    <div class="row" data-container="container">
+                                        <div class="moto-widget moto-widget-row__column moto-cell col-sm-1 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                             data-widget="row.column" data-container="container"
+                                            data-spacing="aaaa" data-bg-position="left top"></div>
+
+                                        <div class="moto-widget moto-widget-row__column moto-cell col-sm-11 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                             data-widget="row.column" data-container="container"
+                                            data-spacing="aaaa" data-bg-position="left top">
+                                            <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                                data-widget="text" data-preset="default" data-spacing="aaaa"
+                                                data-animation="">
+                                                <div class="moto-widget-text-content moto-widget-text-editable">
+                                                    <h2 class="moto-text_system_6">
+                                                        STRETCH CEILINGS
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+
+
+                            <div id="image-container" class="image-grid"></div>
+
+                            <!-- Lightbox Popup -->
+                            <div id="lightbox" class="lightbox hidden">
+                                <span class="close">&times;</span>
+                                <button id="prev" class="nav-btn"></button> <!-- Left arrow -->
+                                <img id="lightbox-img" class="lightbox-img">
+                                <button id="next" class="nav-btn"></button> <!-- Right arrow -->
+                            </div>
+
+                            <!-- Pagination Controls -->
+                            <div id="pagination" class="pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="moto-widget moto-widget-row moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto row-fixed"
+                    data-grid-type="sm" data-widget="row" data-spacing="aaaa" data-bg-position="left top">
+                    <div class="container-fluid">
+                        <div class="row" data-container="container">
+                            <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                data-widget="row.column" data-container="container" data-spacing="aaaa"
+                                data-bg-position="left top">
+                                <div data-widget-id="wid_1546503081_c1vivfkh6"
+                                    class="moto-widget moto-widget-divider moto-preset-2 moto-align-left moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto"
+                                    data-widget="divider_horizontal" data-preset="2">
+                                    <hr class="moto-widget-divider-line" style="max-width: 100%; width: 100%" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <footer id="section-footer" class="footer moto-section" data-widget="section" data-container="section">
+        <div class="moto-widget moto-widget-block moto-bg-color2_3 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+            data-widget="block" data-spacing="aaaa" data-bg-position="left top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="moto-cell col-sm-12" data-container="container">
+                        <div data-widget-id="wid_1528656629_yow2mksny"
+                            class="moto-widget moto-widget-spacer moto-preset-default moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                            data-widget="spacer" data-preset="default" data-spacing="maaa" data-visible-on="mobile-v">
+                            <div class="moto-widget-spacer-block" style="height: 30px"></div>
+                        </div>
+                        <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto"
+                            data-grid-type="sm" data-widget="row" data-spacing="aama" data-bg-position="left top">
+                            <div class="container-fluid">
+                                <div class="row" data-container="container">
+                                    <div class="moto-widget moto-widget-row__column moto-cell col-sm-3 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                        data-widget="row.column" data-container="container" data-spacing="aaaa"
+                                        data-bg-position="left top">
+                                        <div class="moto-widget moto-widget-row moto-justify-content_center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto"
+                                            data-grid-type="sm" data-widget="row" data-spacing="aasa"
+                                            data-bg-position="left top">
+                                            <div class="container-fluid">
+                                                <div class="row" data-container="container">
+                                                    <div class="moto-widget moto-widget-row__column moto-cell col-sm-11 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                                        data-widget="row.column" data-container="container"
+                                                        data-spacing="aaaa" data-bg-position="left top">
+                                                        <div data-widget-id="wid_1546455646_66d491t2q"
+                                                            class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-default moto-align-center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                                            data-widget="image">
+                                                            <a href="./" data-action="page"
+                                                                class="moto-widget-image-link moto-link">
+                                                                <img data-src="assets/images/faxvicon.png"
+                                                                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0  '%3E%3C/svg%3E"
+                                                                    class="moto-widget-image-picture moto-widget-deferred-content lazyload"
+                                                                    data-id="325" title="" alt="" />
+                                                            </a>
+                                                        </div>
+                                                        <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                                            data-widget="text" data-preset="default" data-spacing="aaaa"
+                                                            data-animation="">
+                                                            <div
+                                                                class="moto-widget-text-content moto-widget-text-editable">
+                                                                <p class="moto-text_system_1"
+                                                                    style="text-align: center">
+                                                                    <a target="_self" href="./"
+                                                                        data-action="page" data-id="1"
+                                                                        class="moto-link">Novus Concepts <br> Stretch
+                                                                        Ceilings</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="moto-widget moto-widget-row__column moto-cell col-sm-1 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                                        data-widget="row.column" data-container="container"
+                                                        data-spacing="aaaa" data-bg-position="left top"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto"
+                                            data-widget="text" data-preset="default" data-spacing="aasa"
+                                            data-animation="" style="text-align: center;">
+                                            <div class="moto-widget-text-content moto-widget-text-editable">
+                                                <p class="moto-text_normal">
+                                                    <span class="moto-color5_5">We offer professional,
+                                                        cost-effective and unique stretch ceiling
+                                                        solutions according to every individuals needs and
+                                                        specifications.</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="moto-widget moto-widget-row__column moto-cell col-sm-5 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                        data-widget="row.column" data-container="container" data-spacing="aaaa"
+                                        data-bg-position="center">
+                                        <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-medium"
+                                            data-widget="text" data-preset="default" data-spacing="sasm"
+                                            data-animation="">
+                                            <div class="moto-widget-text-content moto-widget-text-editable">
+                                                <p class="moto-text_system_8">
+                                                    <span class="moto-color5_5">Quick Links</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div id="wid_1528656192_sk319p32a"
+                                            class="moto-widget moto-widget-mail_chimp moto-widget-contact_form moto-preset-3 moto-spacing-top-auto moto-spacing-right-medium moto-spacing-bottom-medium moto-spacing-left-medium"
+                                            data-widget="mail_chimp" data-preset="3">
+                                            <div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                    <div class="moto-widget moto-widget-row__column moto-cell col-sm-5 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                        data-widget="row.column" data-container="container" data-spacing="aaaa"
+                                        data-bg-position="">
+                                        <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-medium"
+                                            data-widget="text" data-preset="default" data-spacing="sasm"
+                                            data-animation="">
+                                            <div class="moto-widget-text-content moto-widget-text-editable">
+                                                <p class="moto-text_system_8" style="text-align: center;">
+                                                    <span class="moto-color5_5">Quick Links</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-medium moto-spacing-bottom-medium moto-spacing-left-medium"
+                                            data-widget="text" data-preset="default" data-spacing="aasa"
+                                            data-animation="">
+                                            <div class="moto-widget-text-content moto-widget-text-editable">
+                                                <ul style="list-style-type: none; text-align: center; padding: 0;">
+                                                    <li><a href=".././" style="color: white;"
+                                                            class="moto-link">Home</a></li>
+                                                    <li><a href="./" style="color: white;"
+                                                            class="moto-link">Projects</a></li>
+                                                    <li><a href="../about-us/./" style="color: white;"
+                                                            class="moto-link">About Us</a></li>
+                                                    <li><a href="../contact-us/./" style="color: white;"
+                                                            class="moto-link">Contact Us</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                        data-widget="row.column" data-container="container" data-spacing="aaaa"
+                                        data-bg-position="left top">
+                                        <div data-widget-id="wid_1546455796_i4kqvo22p"
+                                            class="moto-widget moto-widget-pinterest moto-align-left moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                            data-widget="pinterest">
+                                            <img src="../assets/images/favicon.png" style="width: 100%;" alt=""
+                                                srcset="" sizes="(max-width: 600px) 60vw, 100vw">
+                                            <br><br>
+                                            <center>
+                                                <a target="_blank"
+                                                    href="https://wa.me/9723233413?text=Hello%2C%20I%20browsed%20your%20website%20and%20am%20interested%20in%20your%20stretch%20ceiling%20services.%20Could%20you%20share%20more%20details%20about%20the%20available%20options%20and%20how%20I%20can%20get%20started%3F">
+                                                    <i class="fa fa-whatsapp"
+                                                        style="color: white; font-size: 20px;"></i>
+                                                </a> &nbsp; &nbsp;&nbsp;
+                                                <a target="_blank" href="https://www.instagram.com/novusconcepts/"><i
+                                                        class="fa fa-instagram"
+                                                        style="color: white;  font-size: 20px; "></i></a>
+                                            </center>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="moto-widget moto-widget-container moto-container_footer_5c2d0b4f1"
+                            data-widget="container" data-container="container"
+                            data-css-name="moto-container_footer_5c2d0b4f1" data-bg-position="left top">
+                            <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto"
+                                data-grid-type="sm" data-widget="row" data-spacing="sasa" data-bg-position="left top">
+                                <div class="container-fluid">
+                                    <div class="row" data-container="container">
+                                        <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                            data-widget="row.column" data-container="container" data-spacing="aaaa"
+                                            data-bg-position="left top">
+                                            <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                                                data-widget="text" data-preset="default" data-spacing="aaaa"
+                                                data-animation="">
+                                                <div class="moto-widget-text-content moto-widget-text-editable">
+                                                    <p class="moto-text_220">
+                                                        © Copyrights 2024 - Novus Concepts
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div data-moto-back-to-top-button class="moto-back-to-top-button">
+        <a ng-click="toTop($event)" class="moto-back-to-top-button-link">
+            <span class="moto-back-to-top-button-icon fa"></span>
+        </a>
+    </div>
+    <!-- <script>
+    const folderPath = "../assets/images/projects/"; // Path to your images folder
+const totalImages = 21; // Total number of images
+const container = document.getElementById("image-container");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".close");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+
+let currentIndex = -1; // To track the current image index
+const imagePaths = [];
+
+// Load images dynamically
+for (let i = totalImages; i >= 1; i--) {
+    const imagePath = `${folderPath}media${i}.jpg`;
+    imagePaths.push(imagePath); // Store image paths for navigation
+
+    // Create a wrapper div for each image
+    const imageItem = document.createElement("div");
+    imageItem.className = "image-item";
+
+    // Create the image tag
+    const img = document.createElement("img");
+    img.src = imagePath; // Direct path to the image
+    img.alt = `Media ${i}`;
+
+    // Add click event to show lightbox
+    imageItem.addEventListener("click", () => {
+        currentIndex = i - 1; // Set the current image index (0-based)
+        lightboxImg.src = imagePath; // Set lightbox image source
+        lightbox.classList.remove("hidden"); // Show lightbox
+    });
+
+    // Append the image to the wrapper div
+    imageItem.appendChild(img);
+    container.appendChild(imageItem);
+}
+
+// Close lightbox on clicking the close button
+closeBtn.addEventListener("click", () => {
+    lightbox.classList.add("hidden");
+});
+
+// Close lightbox when clicking outside the image
+lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+        lightbox.classList.add("hidden");
+    }
+});
+
+// Navigate to previous image
+prevBtn.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent the lightbox from closing
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : imagePaths.length - 1; // Wrap around if it's the first image
+    lightboxImg.src = imagePaths[currentIndex]; // Update lightbox image source
+});
+
+// Navigate to next image
+nextBtn.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent the lightbox from closing
+    currentIndex = (currentIndex < imagePaths.length - 1) ? currentIndex + 1 : 0; // Wrap around if it's the last image
+    lightboxImg.src = imagePaths[currentIndex]; // Update lightbox image source
+});
+
+ </script> -->
+
+    <!-- <script>
+    const folderPath = "../assets/images/projects/"; // Path to your images folder
+const totalImages = 21; // Total number of images
+const imagesPerPage = 8; // Number of images per page
+let currentPage = 1; // Current page number
+const container = document.getElementById("image-container");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".close");
+const paginationContainer = document.getElementById("pagination");
+
+// Load images dynamically
+const images = [];
+for (let i = totalImages; i >= 1; i--) {
+    const imagePath = `${folderPath}media${i}.jpg`;
+
+    // Create an image object
+    const img = {
+        src: imagePath,
+        alt: `Novus Concepts Media ${i}`,
+    };
+    images.push(img);
+}
+
+// Display images for the current page
+function displayImages() {
+    container.innerHTML = ""; // Clear the container before adding new images
+    const startIndex = (currentPage - 1) * imagesPerPage;
+    const endIndex = Math.min(currentPage * imagesPerPage, images.length);
+
+    for (let i = startIndex; i < endIndex; i++) {
+        const imageItem = document.createElement("div");
+        imageItem.className = "image-item";
+        
+        const img = document.createElement("img");
+        img.src = images[i].src;
+        img.alt = images[i].alt;
+
+        // Add click event to show lightbox
+        imageItem.addEventListener("click", () => {
+            lightboxImg.src = images[i].src;
+            lightbox.classList.remove("hidden");
+            currentImageIndex = i; // Store the current image index in the lightbox
+        });
+
+        imageItem.appendChild(img);
+        container.appendChild(imageItem);
+    }
+    updatePagination();
+}
+
+// Update pagination buttons
+function updatePagination() {
+    const totalPages = Math.ceil(images.length / imagesPerPage);
+    paginationContainer.innerHTML = ""; // Clear the pagination
+
+    const prevBtn = document.createElement("button");
+    prevBtn.textContent = "Previous";
+    prevBtn.classList.toggle("disabled", currentPage === 1);
+    prevBtn.addEventListener("click", () => changePage(currentPage - 1));
+    paginationContainer.appendChild(prevBtn);
+
+    for (let i = 1; i <= totalPages; i++) {
+        const pageBtn = document.createElement("button");
+        pageBtn.textContent = i;
+        pageBtn.classList.toggle("disabled", currentPage === i);
+        pageBtn.addEventListener("click", () => changePage(i));
+        paginationContainer.appendChild(pageBtn);
+    }
+
+    const nextBtn = document.createElement("button");
+    nextBtn.textContent = "Next";
+    nextBtn.classList.toggle("disabled", currentPage === totalPages);
+    nextBtn.addEventListener("click", () => changePage(currentPage + 1));
+    paginationContainer.appendChild(nextBtn);
+}
+
+// Change the current page and update the displayed images
+function changePage(page) {
+    const totalPages = Math.ceil(images.length / imagesPerPage);
+    if (page < 1 || page > totalPages) return; // Prevent out of range
+    currentPage = page;
+    displayImages();
+}
+
+// Close lightbox on clicking the close button
+closeBtn.addEventListener("click", () => {
+    lightbox.classList.add("hidden");
+});
+
+// Close lightbox when clicking outside the image
+lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+        lightbox.classList.add("hidden");
+    }
+});
+
+// Lightbox navigation (Prev/Next)
+let currentImageIndex = 0;
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
+
+prevButton.addEventListener("click", () => navigateLightbox(-1));
+nextButton.addEventListener("click", () => navigateLightbox(1));
+
+function navigateLightbox(direction) {
+    currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+    lightboxImg.src = images[currentImageIndex].src; // Change the lightbox image
+}
+
+// Initial page load
+displayImages();
+
+</script> -->
+    <script>
+        const folderPath = "../assets/images/projects/"; // Path to your images folder
+        const totalImages = 21; // Total number of images
+        const imagesPerPage = 8; // Number of images per page
+        let currentPage = 1; // Current page number
+        const container = document.getElementById("image-container");
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const closeBtn = document.querySelector(".close");
+        const paginationContainer = document.getElementById("pagination");
+
+        // Load images dynamically
+        const images = [];
+        for (let i = totalImages; i >= 1; i--) {
+            const imagePath = `${folderPath}media${i}.jpg`;
+
+            // Create an image object
+            const img = {
+                src: imagePath,
+                alt: `Novus Concepts Media ${i}`,
+            };
+            images.push(img);
+        }
+
+        // Display images for the current page
+        function displayImages() {
+            container.innerHTML = ""; // Clear the container before adding new images
+            const startIndex = (currentPage - 1) * imagesPerPage;
+            const endIndex = Math.min(currentPage * imagesPerPage, images.length);
+
+            for (let i = startIndex; i < endIndex; i++) {
+                const imageItem = document.createElement("div");
+                imageItem.className = "image-item";
+
+                const img = document.createElement("img");
+                img.src = images[i].src; // Thumbnail image
+                img.alt = images[i].alt;
+
+                // Add click event to show lightbox
+                imageItem.addEventListener("click", () => {
+                    // Set the lightbox image source with ascending order for the -1 suffix
+                    const lightboxImagePath = `${folderPath}media${totalImages - i}-1.jpg`; // Adjust the image path for descending order
+                    lightboxImg.src = lightboxImagePath;
+                    lightboxImg.alt =  `Novus Concepts Full-size Media ${totalImages - i}`;
+                    lightbox.classList.remove("hidden");
+                    currentImageIndex = i; // Store the current image index in the lightbox
+                });
+
+                imageItem.appendChild(img);
+                container.appendChild(imageItem);
+            }
+            updatePagination();
+        }
+
+        // Update pagination buttons
+        function updatePagination() {
+            const totalPages = Math.ceil(images.length / imagesPerPage);
+            paginationContainer.innerHTML = ""; // Clear the pagination
+
+            const prevBtn = document.createElement("button");
+            prevBtn.textContent = "Previous";
+            prevBtn.classList.toggle("disabled", currentPage === 1);
+            prevBtn.addEventListener("click", () => changePage(currentPage - 1));
+            paginationContainer.appendChild(prevBtn);
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageBtn = document.createElement("button");
+                pageBtn.textContent = i;
+                pageBtn.classList.toggle("disabled", currentPage === i);
+                pageBtn.addEventListener("click", () => changePage(i));
+                paginationContainer.appendChild(pageBtn);
+            }
+
+            const nextBtn = document.createElement("button");
+            nextBtn.textContent = "Next";
+            nextBtn.classList.toggle("disabled", currentPage === totalPages);
+            nextBtn.addEventListener("click", () => changePage(currentPage + 1));
+            paginationContainer.appendChild(nextBtn);
+        }
+
+        // Change the current page and update the displayed images
+        function changePage(page) {
+            const totalPages = Math.ceil(images.length / imagesPerPage);
+            if (page < 1 || page > totalPages) return; // Prevent out of range
+            currentPage = page;
+            displayImages();
+        }
+
+        // Close lightbox on clicking the close button
+        closeBtn.addEventListener("click", () => {
+            lightbox.classList.add("hidden");
+        });
+
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener("click", (event) => {
+            if (event.target === lightbox) {
+                lightbox.classList.add("hidden");
+            }
+        });
+
+        // Lightbox navigation (Prev/Next)
+        let currentImageIndex = 0;
+        const prevButton = document.getElementById("prev");
+        const nextButton = document.getElementById("next");
+
+        prevButton.addEventListener("click", () => navigateLightbox(-1));
+        nextButton.addEventListener("click", () => navigateLightbox(1));
+
+        function navigateLightbox(direction) {
+            currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+            const lightboxImagePath = `${folderPath}media${totalImages - currentImageIndex}-1.jpg`; // Adjust for descending order
+            lightboxImg.src = lightboxImagePath; // Change the lightbox image
+            lightboxImg.alt =  `Novus Concepts Full-size Media ${totalImages - currentImageIndex}`;
+        }
+
+        // Initial page load
+        displayImages();
+    </script>
+
+    <script type="text/javascript" data-cfasync="false">
+        var websiteConfig = websiteConfig || {};
+        websiteConfig.address = ".././";
+        websiteConfig.relativeAddress = ".././";
+        websiteConfig.addressHash = "79d50bfa852c5e9bf87fd075ad78146c";
+        websiteConfig.apiUrl = "../api.json";
+        websiteConfig.preferredLocale = "en_US";
+        websiteConfig.preferredLanguage = websiteConfig.preferredLocale.substring(
+            0,
+            2
+        );
+        websiteConfig.back_to_top_button = {
+            topOffset: 300,
+            animationTime: 500,
+            type: "theme",
+        };
+        websiteConfig.popup_preferences = {
+            loading_error_message: "The content could not be loaded.",
+        };
+        websiteConfig.lazy_loading = { enabled: true };
+        websiteConfig.cookie_notification = {
+            enabled: false,
+            content:
+                '<p class="moto-text_normal">This website uses cookies to ensure you get the best experience on our website.<\/p>',
+            content_hash: "6610aef7f7138423e25ee33c75f23279",
+            controls: {
+                visible: "close,accept",
+                accept: {
+                    label: "Got it",
+                    preset: "default",
+                    size: "medium",
+                    cookie_lifetime: 365,
+                },
+            },
+        };
+        if (
+            window.websiteConfig.lazy_loading &&
+            !window.websiteConfig.lazy_loading.enabled
+        ) {
+            window.lazySizesConfig = window.lazySizesConfig || {};
+            window.lazySizesConfig.preloadAfterLoad = true;
+        }
+    </script>
+    <script src="../mt-includes/js/website.assets.minfb11.js?_build=1659979209" type="text/javascript"
+        data-cfasync="false"></script>
+    <script src="../mt-includes/js/website.min8528.js?_build=1659979201" type="text/javascript"
+        data-cfasync="false"></script>
+
+</body>
+
+</html>
