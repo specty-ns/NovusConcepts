@@ -42,9 +42,9 @@
                 "description": "Explore Novus Concepts' portfolio of completed stretch ceiling projects, highlighting innovative and high-quality solutions for residential, commercial, and industrial spaces.",
                 "url": "https://novusconcepts.in/projects",
                 "image": [
-                    "https://novusconcepts.inassets/images/projects/1.jpg",
-                    "https://novusconcepts.inassets/images/projects/14.jpg",
-                    "https://novusconcepts.in/assets/images/projects/media21.jpg"
+                    "https://novusconcepts.inassets/images/projects/1.JPG",
+                    "https://novusconcepts.in/assets/images/projects/14.JPG",
+                    "https://novusconcepts.in/assets/images/projects/media21.JPG"
                 ],
                 "publisher": {
                     "@type": "Organization",
@@ -851,7 +851,7 @@ displayImages();
         // Load images dynamically
         const images = [];
         for (let i = totalImages; i >= 1; i--) {
-            const imagePath = `${folderPath}media${i}.jpg`;
+            const imagePath = `${folderPath}media${i}.JPG`;
 
             // Create an image object
             const img = {
@@ -878,7 +878,7 @@ displayImages();
                 // Add click event to show lightbox
                 imageItem.addEventListener("click", () => {
                     // Set the lightbox image source with ascending order for the -1 suffix
-                    const lightboxImagePath = `${folderPath}media${totalImages - i}-1.jpg`; // Adjust the image path for descending order
+                    const lightboxImagePath = `${folderPath}media${totalImages - i}-1.JPG`; // Adjust the image path for descending order
                     lightboxImg.src = lightboxImagePath;
                     lightboxImg.alt =  `Novus Concepts Full-size Media ${totalImages - i}`;
                     lightbox.classList.remove("hidden");
@@ -947,7 +947,7 @@ displayImages();
 
         function navigateLightbox(direction) {
             currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
-            const lightboxImagePath = `${folderPath}media${totalImages - currentImageIndex}-1.jpg`; // Adjust for descending order
+            const lightboxImagePath = `${folderPath}media${totalImages - currentImageIndex}-1.JPG`; // Adjust for descending order
             lightboxImg.src = lightboxImagePath; // Change the lightbox image
             lightboxImg.alt =  `Novus Concepts Full-size Media ${totalImages - currentImageIndex}`;
         }
