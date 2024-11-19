@@ -100,7 +100,28 @@ function closeAllTabs(clickedElement) {
     //     container.appendChild(colDiv);
     // });
 
-  
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll(".section-transition");
+    
+      const options = {
+        root: null, // Use the viewport as the root
+        rootMargin: "0px",
+        threshold: 0.1, // Trigger when 10% of the section is visible
+      };
+    
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target); // Stop observing once shown
+          }
+        });
+      }, options);
+    
+      sections.forEach((section) => {
+        observer.observe(section); // Observe each section
+      });
+    });
 
 console.log("main.js loaded");
 
