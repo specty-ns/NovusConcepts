@@ -134,7 +134,7 @@ const paginationContainer = document.getElementById("pagination");
 // Load images dynamically
 const images = [];
 for (let i = totalImages; i >= 1; i--) {
-  const imagePath = `${folderPath}media${i}-1.jpg`;
+  const imagePath = `${folderPath}media${i}.jpg`;
 
   // Create an image object
   const img = {
@@ -160,7 +160,7 @@ function displayImages() {
 
     // Add click event to show lightbox
     imageItem.addEventListener("click", () => {
-      // Set the lightbox image source with ascending order for the -1 suffix
+      // Set the lightbox image source with ascending order
       const lightboxImagePath = `${folderPath}media${totalImages - i}.jpg`; // Adjust the image path for descending order
       lightboxImg.src = lightboxImagePath;
       lightboxImg.alt = `Novus Concepts Full-size Media ${totalImages - i}`;
