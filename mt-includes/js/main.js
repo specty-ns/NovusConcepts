@@ -140,6 +140,7 @@ for (let i = totalImages; i >= 1; i--) {
   const img = {
     src: imagePath,
     alt: `Novus Concepts Media ${i}`,
+    title: `Novus Concepts Media ${i}`,
   };
   images.push(img);
 }
@@ -157,6 +158,7 @@ function displayImages() {
     const img = document.createElement("img");
     img.src = images[i].src; // Thumbnail image
     img.alt = images[i].alt;
+    img.title = images[i].title;
 
     // Add click event to show lightbox
     imageItem.addEventListener("click", () => {
@@ -164,6 +166,7 @@ function displayImages() {
       const lightboxImagePath = `${folderPath}media${totalImages - i}.jpg`; // Adjust the image path for descending order
       lightboxImg.src = lightboxImagePath;
       lightboxImg.alt = `Novus Concepts Full-size Media ${totalImages - i}`;
+      lightboxImg.title = `Novus Concepts Full-size Media ${totalImages - i}`;
       lightbox.classList.remove("hidden");
       currentImageIndex = i; // Store the current image index in the lightbox
     });
@@ -290,9 +293,15 @@ function navigateLightbox(direction) {
   lightboxImg.alt = `Novus Concepts Full-size Media ${
     totalImages - currentImageIndex
   }`;
+  lightboxImg.title = `Novus Concepts Full-size Media ${
+    totalImages - currentImageIndex
+  }`;
 }
 
 // Initial page load
 displayImages();
+
+var copy = document.querySelector(".logos-slide").cloneNode(true);
+document.querySelector(".logo-slider").appendChild(copy);
 
 console.log("main.js loaded");
