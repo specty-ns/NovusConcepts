@@ -1890,7 +1890,7 @@
                                                 data-animation="">
                                                 <div class="moto-widget-text-content moto-widget-text-editable">
                                                     <p class="moto-text_220">
-                                                        © Copyrights 2024 - Novus Concepts
+                                                        Copyright © <span id="year"></span> | Novus Concepts
                                                     </p>
                                                     <!-- <a href="https://www.freepik.com/icon/web-design_3159310#fromView=search&page=1&position=1&uuid=67b030f6-b90c-47c3-88d4-e676f678ca6e">Icon by Freepik</a> -->
                                                 </div>
@@ -1905,6 +1905,9 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
     <div data-moto-back-to-top-button class="moto-back-to-top-button">
         <a ng-click="toTop($event)" class="moto-back-to-top-button-link">

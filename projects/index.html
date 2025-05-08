@@ -475,7 +475,7 @@
                                                 data-animation="">
                                                 <div class="moto-widget-text-content moto-widget-text-editable">
                                                     <p class="moto-text_220">
-                                                        © Copyrights 2024 - Novus Concepts
+                                                        Copyright © <span id="year"></span> | Novus Concepts
                                                     </p>
                                                 </div>
                                             </div>
@@ -489,6 +489,10 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
     <div data-moto-back-to-top-button class="moto-back-to-top-button">
         <a ng-click="toTop($event)" class="moto-back-to-top-button-link">

@@ -514,7 +514,7 @@
                                                 data-animation="">
                                                 <div class="moto-widget-text-content moto-widget-text-editable">
                                                     <p class="moto-text_220">
-                                                        © Copyrights 2024 - Novus Concepts
+                                                        Copyright © <span id="year"></span> | Novus Concepts
                                                     </p>
                                                 </div>
                                             </div>
@@ -528,6 +528,9 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
     <!-- <footer id="section-footer" class="footer moto-section" data-widget="section" data-container="section">
         <div class="moto-widget moto-widget-block moto-bg-color2_3 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
@@ -791,7 +794,7 @@ function generateWhatsAppLink(event) {
         const encodedMessage = encodeURIComponent(message.value.trim());
         
         // Define your WhatsApp phone number
-        const phoneNumber = '+919723233413';  // Replace with your WhatsApp business number
+        const phoneNumber = '+919723233413';
         
         // Generate the WhatsApp URL
         const whatsappLink = `https://wa.me/${phoneNumber}?text=Hello%2C%20my%20name%20is%20${encodedName}%2E%20${encodedMessage}`;
